@@ -28,7 +28,7 @@ spec:
         env:
         - name: ENV_NAME
           value: "PR_NAMESPACE"
-        - name: PR_NUMBER
+        - name: PR_NUM
           value: "PR_NUMBER"
         - name: PORT
           value: "3000"

@@ -1,14 +1,13 @@
-
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Getting environment info
+// Get environment info
 const ENV_NAME = process.env.ENV_NAME || 'unknown';
-const PR_NUMBER = process.env.PR_NUMBER || 'N/A';
+const PR_NUMBER = process.env.PR_NUM || 'N/A';
 
 app.get('/', (req, res) => {
-    res.send(`
+  res.send(`
     <!DOCTYPE html>
     <html>
     <head>
@@ -61,7 +60,7 @@ app.get('/', (req, res) => {
         </div>
         
         <div class="success">
-          Voila! Application is running successfully!
+          Application is running successfully!
         </div>
       </div>
     </body>
@@ -70,16 +69,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/health', (req, res) => {
-    res.json({
-        status: 'healthy',
-        environment: ENV_NAME,
-        pr: PR_NUMBER,
-        timestamp: new Date().toISOString()
-    });
+  res.json({
+    status: 'healthy',
+    environment: ENV_NAME,
+    pr: PR_NUMBER,
+    timestamp: new Date().toISOString()
+  });
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Environment: ${ENV_NAME}`);
-    console.log(`PR Number: ${PR_NUMBER}`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`Environment: ${ENV_NAME}`);
+  console.log(`PR Number: ${PR_NUMBER}`);
 });
