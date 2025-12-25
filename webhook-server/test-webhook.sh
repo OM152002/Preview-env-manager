@@ -26,7 +26,10 @@ test_pr_opened() {
       "merged": false
     },
     "repository": {
-      "name": "preview-env-manager"
+      "name": "preview-env-manager",
+      "owner": {
+        "login": "OM152002"
+      }
     }
   }'
   
@@ -58,7 +61,10 @@ test_pr_closed() {
       "merged": true
     },
     "repository": {
-      "name": "preview-env-manager"
+      "name": "preview-env-manager",
+      "owner": {
+        "login": "OM152002"
+      }
     }
   }'
   
