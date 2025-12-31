@@ -4,7 +4,7 @@ A tool that automatically creates test environments for GitHub pull requests. Th
 
 ## Why I Built This
 
-When reviewing pull requests, you usually just read the code and hope it works. But what if you could actually *see* the changes running live? That's what this does - it spins up a complete copy of your app for every PR, lets you test it, and cleans up when you're done.
+When reviewing pull requests, you usually just read the code and hope it works. But what if you could actually *see* the changes running live? That's what this does. It spins up a complete copy of your app for every PR, lets you test it, and cleans up when you're done.
 
 ## What It Does
 
@@ -38,7 +38,7 @@ GitHub PR → Webhook → My Server → Kubernetes → Running App
 - kubectl (deployment management)
 
 **Tools:**
-- ngrok (exposes local server to GitHub)
+- ngrok (to expose my local server to GitHub)
 - Bash scripts (automate deployments)
 
 ## Setup
@@ -90,7 +90,7 @@ ngrok http 4000
 
 Create a PR and the bot will comment with something like this:
 ```
-🎉 Preview Environment Ready!
+Preview Environment Ready!
 
 To access this preview:
 kubectl port-forward -n pr-1 svc/sample-app-service 8001:3000
@@ -121,7 +121,7 @@ preview-env-manager/
 
 Right now this is set up for local development with kind. In a real production setup you'd want:
 - Actual domain names instead of localhost
-- Better scaling (supports PR numbers 1-99 currently)
+- Better scaling (Currently it only supports PR numbers 1-99)
 - Database per environment
 - Better monitoring and logging
 
@@ -131,8 +131,7 @@ But it works great for demonstrating the concept and learning DevOps fundamental
 
 - Add database seeding for each environment
 - Support multiple apps/services per PR
-- Cost tracking per environment
-- Slack notifications
+- Slack/Discord notifications
 - Auto-expire old environments
 
 ## License
