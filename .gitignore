@@ -3,3 +3,16 @@ node_modules/
 *.log
 .DS_Store
 kind-config.yaml
+
+# Environment variables
+.env
+*.env
+
+# ngrok
+ngrok.yml
+
+# Kubernetes
+kubeconfig
+
+# macOS
+.DS_Store
