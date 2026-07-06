@@ -1,4 +1,5 @@
 # Preview Environment Manager
+**License:** [MIT](LICENSE)
 
 A tool that automatically creates test environments for GitHub pull requests. Think of it like how Vercel gives you a preview link for every PR, but this works for any app running on Kubernetes.
 
